@@ -1,0 +1,173 @@
+$text-primary-1: #e0e0e0;
+$text-primary-2: #a0a0a0;
+$text-primary-3: #6c6c6c;
+$text-secondary-1: #121212;
+$text-highlight-primary: #ff8d4e;
+$text-highlight-secondary: #a34d21;
+$text-negative-primary: #ef5555;
+$text-negative-secondary: #402c2c;
+$text-positive-primary: #63b780;
+$text-positive-secondary: #29382e;
+$bg-primary-1: #121212;
+$bg-primary-2: #1d1d1d;
+$bg-primary-3: #242424;
+$bg-primary-4: #2c2c2c;
+$bg-primary-5: #333333;
+$bg-primary-6: #383838;
+$bg-primary-7: #454545;
+$bg-highlight-primary: #ff8d4e;
+$bg-highlight-hover: #a34d21;
+$bg-highlight-disabled: #8a4829;
+$bg-highlight-secondary: #402f27;
+$bg-negative-primary: #ef5555;
+$bg-negative-secondary: #402c2c;
+$bg-positive-primary: #63b780;
+$bg-positive-secondary: #29382e;
+$stroke-primary-1: #1d1d1d;
+$stroke-primary-2: #242424;
+$stroke-primary-3: #2c2c2c;
+$stroke-primary-4: #333333;
+$stroke-primary-5: #383838;
+$stroke-primary-6: #454545;
+$stroke-primary-7: #575757;
+$stroke-secondary-1: #6c6c6c;
+$stroke-secondary-2: #a0a0a0;
+$stroke-highlight: #ff8d4e;
+$stroke-positive: #63b780;
+$stroke-negative: #ef5555;
+
+@mixin heading1(
+  $fontColor: $text-primary-1,
+  $backgroundColor: transparent,
+  $font: Michroma,
+  $text-transform: none,
+  $padding: 0,
+  $margin: 0
+) {
+  color: $fontColor;
+  background-color: $backgroundColor;
+  margin: $margin;
+  padding: $padding;
+  font-family: $font;
+  font-size: 24px;
+  line-height: 34px;
+  letter-spacing: 0.725em;
+  text-transform: $text-transform;
+}
+@mixin heading2(
+  $fontColor: $text-primary-1,
+  $backgroundColor: transparent,
+  $font: Michroma,
+  $text-transform: none,
+  $padding: 0,
+  $margin: 0
+) {
+  color: $fontColor;
+  background-color: $backgroundColor;
+  margin: $margin;
+  padding: $padding;
+  font-family: $font;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0.725em;
+  text-transform: $text-transform;
+}
+
+@mixin heading3(
+  $fontColor: $text-primary-3,
+  $backgroundColor: transparent,
+  $font: Michroma,
+  $text-transform: none,
+  $padding: 0,
+  $margin: 0
+) {
+  color: $fontColor;
+  background-color: $backgroundColor;
+  margin: $margin;
+  padding: $padding;
+  font-family: $font;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: 0.725em;
+  text-transform: $text-transform;
+}
+@mixin bodyText1(
+  $fontColor: $text-primary-1,
+  $backgroundColor: transparent,
+  $font: Inter,
+  $text-transform: none,
+  $padding: 0,
+  $margin: 0
+) {
+  color: $fontColor;
+  background-color: $backgroundColor;
+  margin: $margin;
+  padding: $padding;
+  font-family: $font;
+  font-size: 14px;
+  line-height: 146.02%;
+  text-transform: $text-transform;
+}
+@mixin bodyText2(
+  $fontColor: $text-secondary-1,
+  $backgroundColor: transparent,
+  $font: Inter,
+  $text-transform: none,
+  $padding: 0,
+  $margin: 0
+) {
+  color: $fontColor;
+  background-color: $backgroundColor;
+  margin: $margin;
+  padding: $padding;
+  font-family: $font;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 146.02%;
+  text-transform: $text-transform;
+}
+
+@mixin backgroundTranistion {
+  transition: all 500ms ease;
+  transition-property: background-color, color, fill, stroke, border;
+}
+
+:export {
+  text_primary_1: $text-primary-1;
+  text_primary_2: $text-primary-2;
+  text_primary_3: $text-primary-3;
+  text_secondary-1: $text-secondary-1;
+  text_highlight_primary: $text-highlight-primary;
+  text_highlight_secondary: $text-highlight-secondary;
+  text_negative_primary: $text-negative-primary;
+  text_negative_secondary: $text-negative-secondary;
+  text_positive_primary: $text-positive-primary;
+  text_positive_secondary: $text-positive-secondary;
+  bg_primary_1: $bg-primary-1;
+  bg_primary_2: $bg-primary-2;
+  bg_primary_3: $bg-primary-3;
+  bg_primary_4: $bg-primary-4;
+  bg_primary_5: $bg-primary-5;
+  bg_primary_6: $bg-primary-6;
+  bg_primary_7: $bg-primary-7;
+  bg_highlight_primary: $bg-highlight-primary;
+  bg_highlight_hover: $bg-highlight-hover;
+  bg_highlight_disabled: $bg-highlight-disabled;
+  bg_highlight_secondary: $bg-highlight-secondary;
+  bg_negative_primary: $bg-negative-primary;
+  bg_negative_secondary: $bg-negative-secondary;
+  bg_positive_primary: $bg-positive-primary;
+  bg_positive_secondary: $bg-positive-secondary;
+  stroke_primary_1: $stroke-primary-1;
+  stroke_primary_2: $stroke-primary-2;
+  stroke_primary_3: $stroke-primary-3;
+  stroke_primary_4: $stroke-primary-4;
+  stroke_primary_5: $stroke-primary-5;
+  stroke_primary_6: $stroke-primary-6;
+  stroke_primary_7: $stroke-primary-7;
+  stroke_secondary_1: $stroke-secondary-1;
+  stroke_secondary_2: $stroke-secondary-2;
+  stroke_highlight: $stroke-highlight;
+  stroke_positive: $stroke-positive;
+  stroke_negative: $stroke-negative;
+}
