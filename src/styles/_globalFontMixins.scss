@@ -1,0 +1,139 @@
+@import "../themeColors";
+
+@mixin globalInterFont() {
+  font-family: Inter;
+}
+@mixin globalRubikFont() {
+  font-family: Rubik;
+  text-transform: uppercase;
+}
+@mixin heading1(
+  $fontColor: $text-primary-1,
+  $backgroundColor: transparent,
+  $padding: 0,
+  $margin: 0
+) {
+  color: $fontColor;
+  background-color: $backgroundColor;
+  margin: $margin;
+  padding: $padding;
+  font-weight: 300;
+  font-size: 32px;
+  font-style: normal;
+  line-height: 121.02%;
+  letter-spacing: -0.055em;
+}
+@mixin heading2(
+  $fontColor: $text-primary-1,
+  $backgroundColor: transparent,
+  $padding: 0,
+  $margin: 0
+) {
+  color: $fontColor;
+  background-color: $backgroundColor;
+  margin: $margin;
+  padding: $padding;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 121.02%;
+  letter-spacing: -0.055em;
+}
+@mixin heading2-5(
+  $fontColor: $text-primary-1,
+  $backgroundColor: transparent,
+  $padding: 0,
+  $margin: 0
+) {
+  color: $fontColor;
+  background-color: $backgroundColor;
+  margin: $margin;
+  padding: $padding;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 121.02%;
+  letter-spacing: -0.015em;
+}
+@mixin heading3(
+  $fontColor: $text-primary-1,
+  $backgroundColor: transparent,
+  $padding: 0,
+  $margin: 0
+) {
+  color: $fontColor;
+  background-color: $backgroundColor;
+  margin: $margin;
+  padding: $padding;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 121.02%;
+  // letter-spacing: -0.055em; // causing letter spacing issue. Not consistent with Figma design
+}
+@mixin subHeading1(
+  $fontColor: $text-primary-1,
+  $backgroundColor: transparent,
+  $padding: 0,
+  $margin: 0,
+  $fontWeight: 600,
+  $lineHeight: 146.02%
+) {
+  color: $fontColor;
+  background-color: $backgroundColor;
+  margin: $margin;
+  padding: $padding;
+  font-weight: $fontWeight;
+  font-size: 16px;
+  line-height: $lineHeight;
+}
+@mixin normalText(
+  $fontColor: $text-primary-1,
+  $backgroundColor: transparent,
+  $padding: 0,
+  $margin: 0
+) {
+  color: $fontColor;
+  background-color: $backgroundColor;
+  margin: $margin;
+  padding: $padding;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 146.02%;
+  // letter-spacing: .5px;
+}
+@mixin smallText(
+  $fontColor: $text-primary-1,
+  $backgroundColor: transparent,
+  $padding: 0,
+  $margin: 0
+) {
+  color: $fontColor;
+  background-color: $backgroundColor;
+  margin: $margin;
+  padding: $padding;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 146.02%;
+}
+@mixin subText(
+  $fontColor: $text-primary-1,
+  $backgroundColor: transparent,
+  $padding: 0,
+  $margin: 0,
+  $important: false
+) {
+  color: $fontColor if-important($important);
+  background-color: $backgroundColor;
+  margin: $margin;
+  padding: $padding if-important($important);
+  font-weight: 600;
+  font-size: 12px if-important($important);
+  line-height: 13px;
+}
+
+@mixin backgroundTranistion {
+  transition: all 500ms ease;
+  transition-property: background-color, color, fill, stroke, border, opacity;
+}
+
+@function if-important($important) {
+  @return #{if($important, "!important", "")};
+}
