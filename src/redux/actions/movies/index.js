@@ -11,8 +11,8 @@ export const getAllMovies = () => async (dispatch) => {
   });
 
   try {
-    const { results } = await fetchWrapper.get("/list/1");
-    dispatch({ type: FETCH_ALL_MOVIES_SUCCESS, data: results });
+    const { items } = await fetchWrapper.get("/list/1");
+    dispatch({ type: FETCH_ALL_MOVIES_SUCCESS, data: items });
   } catch (error) {
     dispatch({
       type: FETCH_ALL_MOVIES_FAILURE,

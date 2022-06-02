@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { getAllMovies } from "./redux/actions/movies";
 import "./App.scss";
-import Movies from "./screens/Movies";
+import Routes from "./AppRoutes";
 
 function App() {
   const dispatch = useDispatch();
@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div className="body">
-      <Movies />
+      <Routes />
     </div>
   );
 }

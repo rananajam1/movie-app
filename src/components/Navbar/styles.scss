@@ -1,0 +1,29 @@
+@import "../../styles/globalVariable";
+@import "../../styles/global.scss";
+
+.navbar {
+  padding: 20px;
+  margin-bottom: 40px;
+  background-color: $bg-primary-3;
+
+  .container {
+    display: flex;
+
+    > div {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 20px;
+
+      > span {
+        color: $text-primary-1;
+        font-size: 20px;
+      }
+    }
+  }
+
+  .container:hover {
+    cursor: pointer;
+  }
+}
