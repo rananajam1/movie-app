@@ -1,6 +1,6 @@
 import React from "react";
 import { AiFillStar } from "react-icons/ai";
-import SecondaryButton from "../../components/SecondaryButton";
+import SecondaryButton from "../SecondaryButton";
 
 export default function MovieCard({
   movie: { title, poster_path, vote_average, id },

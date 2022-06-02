@@ -36,3 +36,8 @@ function movies(state = initialState, action) {
 }
 
 export default movies;
+
+export const getFilteredMoviesData = (state, searchText) =>
+  state.data.filter(({ title }) =>
+    title.toLowerCase().includes(searchText.toLowerCase())
+  );

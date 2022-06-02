@@ -1,0 +1,68 @@
+@import "../../themeColors";
+@import "../../styles/global.scss";
+.actionHeader {
+  display: flex;
+  justify-content: center;
+  width: 300px;
+  margin-top: 32px;
+  gap: 30px;
+  align-self: center;
+  align-items: center;
+  > p {
+    font-size: 20px;
+    color: $text-primary-1;
+    font-weight: 500;
+  }
+
+  > div {
+    display: flex;
+    gap: 24px;
+
+    > input {
+      background-color: $bg-primary-2;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      color: $text-primary-1;
+      padding: 8px 12px;
+    }
+  }
+}
+
+.sectionPagination {
+  list-style-type: none;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 0;
+
+  > li:first-child,
+  > li:last-child {
+    > a {
+      text-decoration: none;
+      font-size: 18px;
+      color: $primary-1;
+    }
+  }
+
+  > li {
+    color: $text-primary-2;
+
+    > a {
+      background-color: $bg-primary-2;
+      :hover {
+        background-color: $bg-primary-3;
+      }
+      padding: 6px 12px;
+      border-radius: 8px;
+    }
+  }
+
+  > li.selected {
+    color: $primary-1;
+  }
+
+  > li.disabled {
+    opacity: 0.5;
+  }
+}
