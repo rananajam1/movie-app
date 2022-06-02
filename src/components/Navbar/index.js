@@ -6,7 +6,7 @@ import "./styles.scss";
 export default function Navbar() {
   const navigate = useNavigate();
   return (
-    <nav className="navbar navbar-dark">
+    <nav className="nav">
       <div className="container">
         <div onClick={() => navigate(-1)}>
           <AiOutlineLeft size={30} color={"white"} />

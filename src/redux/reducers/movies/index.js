@@ -41,3 +41,5 @@ export const getFilteredMoviesData = (state, searchText) =>
   state.data.filter(({ title }) =>
     title.toLowerCase().includes(searchText.toLowerCase())
   );
+
+export const getMoviesIsFetching = (state) => state.isFetching;

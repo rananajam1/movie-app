@@ -1,0 +1,96 @@
+@import "../../themeColors";
+@import "../../styles/globalFontMixins";
+@import "../../styles/global.scss";
+
+.movieDetailsContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  justify-content: center;
+
+  .image-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    width: 30vw;
+
+    .sections {
+      display: flex;
+      flex-direction: row;
+      gap: 5px;
+
+      .section {
+        display: flex;
+        flex-direction: column;
+        height: 100px;
+        width: 120px;
+        align-items: center;
+        gap: 3px;
+        border-radius: 8px;
+        justify-content: center;
+
+        > span {
+          @include globalInterFont;
+          color: $text-primary-1;
+          font-size: 18px;
+        }
+        > p {
+          @include globalInterFont;
+          color: $text-primary-1;
+          font-size: 28px;
+          > b {
+            font-size: 32px;
+          }
+        }
+      }
+
+      .section:hover {
+        background-color: $bg-primary-5;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .detail-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 60vw;
+
+    .section {
+      width: 100%;
+      border-bottom: 1px solid $stroke-primary-1;
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      align-items: flex-start;
+      text-align: justify;
+      flex-wrap: wrap;
+
+      > h1 {
+        @include globalInterFont;
+        color: $text-primary-1;
+      }
+      > span {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        @include globalInterFont;
+        color: $text-primary-1;
+
+        > p {
+          font-size: 16px;
+          color: $text-primary-2;
+        }
+      }
+    }
+  }
+}
+
+.poster {
+  border-radius: 4px;
+}
