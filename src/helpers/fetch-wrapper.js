@@ -5,37 +5,53 @@ export const fetchWrapper = {
   delete: _delete,
 };
 
-function get(url) {
+const accessToken = process.env.REACT_APP_MOVIE_DB_AUTH_TOKEN;
+
+function get(endpoint) {
   const requestOptions = {
     method: "GET",
+    headers: {
+      Authorization: `Bearer ${accessToken}`,
+    },
   };
-  return fetch(url, requestOptions).then(handleResponse);
+
+  const API_URL = `${process.env.REACT_APP_API_URL}${endpoint}`;
+  return fetch(API_URL, requestOptions).then(handleResponse);
 }
 
-function post(url, body) {
+function post(endpoint, body) {
   const requestOptions = {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${accessToken}`,
+    },
     body: JSON.stringify(body),
   };
-  return fetch(url, requestOptions).then(handleResponse);
+  return fetch(endpoint, requestOptions).then(handleResponse);
 }
 
-function put(url, body) {
+function put(endpoint, body) {
   const requestOptions = {
     method: "PUT",
-    headers: { "Content-Type": "application/json" },
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${accessToken}`,
+    },
     body: JSON.stringify(body),
   };
-  return fetch(url, requestOptions).then(handleResponse);
+  return fetch(endpoint, requestOptions).then(handleResponse);
 }
 
 // prefixed with underscored because delete is a reserved word in javascript
-function _delete(url) {
+function _delete(endpoint) {
   const requestOptions = {
     method: "DELETE",
+    headers: {
+      Authorization: `Bearer ${accessToken}`,
+    },
   };
-  return fetch(url, requestOptions).then(handleResponse);
+  return fetch(endpoint, requestOptions).then(handleResponse);
 }
 
 // helper functions

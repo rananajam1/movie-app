@@ -1,3 +1,4 @@
+import { fetchWrapper } from "../../../helpers/fetch-wrapper";
 import {
   FETCH_ALL_MOVIES_FAILURE,
   FETCH_ALL_MOVIES_REQUEST,
@@ -10,10 +11,12 @@ export const getAllMovies = () => async (dispatch) => {
   });
 
   try {
+    const { results } = await fetchWrapper.get("/list/1");
     dispatch({ type: FETCH_ALL_MOVIES_SUCCESS, data: results });
   } catch (error) {
     dispatch({
       type: FETCH_ALL_MOVIES_FAILURE,
+      error,
     });
   }
 };

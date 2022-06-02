@@ -1,0 +1,30 @@
+@import "../../themeColors";
+@import "../../styles/globalFontMixins";
+@import "../../styles/global.scss";
+
+.secondaryButton {
+  @include globalInterFont;
+  @include subHeading1(
+    $text-highlight-primary,
+    $bg-highlight-secondary,
+    11px 16px
+  );
+  @include backgroundTranistion;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  outline: none;
+  border: 1px solid $stroke-primary-5;
+  box-sizing: border-box;
+  box-shadow: none;
+  width: 200px;
+  cursor: pointer;
+  &:hover {
+    border-color: $stroke-highlight;
+  }
+  &:disabled {
+    cursor: not-allowed;
+    border-color: transparent;
+  }
+}

@@ -1,0 +1,21 @@
+@import "../../themeColors";
+@import "../../styles/globalFontMixins";
+@import "../../styles/global.scss";
+.primaryButton {
+  @include globalInterFont;
+  @include subHeading1($text-secondary-1, $bg-highlight-primary, 11px 32px);
+  @include backgroundTranistion;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  box-shadow: none;
+  width: 200px;
+  cursor: pointer;
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
