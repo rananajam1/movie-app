@@ -9,9 +9,12 @@ import {
 } from "../../redux/reducers/movies";
 import Loading from "../../components/Loading";
 import { getAllMovies } from "../../redux/actions/movies";
+import PrimaryButton from "../../components/PrimaryButton";
+import { useNavigate } from "react-router-dom";
 
 export default function Movies() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const [searchText, setSearchText] = React.useState("");
 
@@ -26,17 +29,22 @@ export default function Movies() {
   }, []);
 
   return (
-    <div>
+    <div className="mainContainer">
       {isLoading ? (
         <Loading isLoading={isLoading} />
       ) : (
         <div>
-          <SectionHeader
-            label={""}
-            onPageChange={() => {}}
-            onSearch={(text) => setSearchText(text)}
-            pageCount={0}
-          />
+          <div className="actionBar">
+            <PrimaryButton onClick={() => navigate("/stats")}>
+              View Top Rated
+            </PrimaryButton>
+            <SectionHeader
+              label={""}
+              onPageChange={() => {}}
+              onSearch={(text) => setSearchText(text)}
+              pageCount={0}
+            />
+          </div>
           <div className="moviesContainer">
             {filteredMovies?.map((movie, key) => (
               <MovieCard movie={movie} key={key} />

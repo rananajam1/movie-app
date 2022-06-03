@@ -1,3 +1,7 @@
+@import "../../themeColors";
+@import "../../styles/globalFontMixins";
+@import "../../styles/global.scss";
+
 .statsContainer {
   display: flex;
   flex-direction: column;
@@ -5,4 +9,8 @@
   justify-content: center;
   height: 100vh;
   gap: 30px;
+  > h1 {
+    @include globalInterFont;
+    color: $text-primary-1;
+  }
 }
