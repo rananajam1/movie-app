@@ -63,7 +63,7 @@ function BarChart({ data }) {
 
       svg
         .select(".plot-area")
-        .attr("fill", "steelblue")
+        .attr("fill", "#ff8d4e")
         .selectAll(".bar")
         .data(data)
         .join("rect")
