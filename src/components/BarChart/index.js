@@ -51,6 +51,16 @@ function BarChart({ width, height, data }) {
       .attr("y", (d) => height)
       .attr("height", 0)
       .remove();
+
+    svg
+      .selectAll("text")
+      .data(data)
+      .enter()
+      .append("text")
+      .text((d) => d)
+      .transition(400)
+      .attr("x", (d, i) => i * 45)
+      .attr("y", (d, i) => height - 10 * d - 3);
   };
 
   return (
